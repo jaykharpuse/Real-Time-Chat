@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🌈 RGB animated gradient background */
+  background: linear-gradient(-45deg, #ff00c8, #00ffe0, #6f00ff, #00ffa3);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe5;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.formContainer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px #00f7ff;
+  min-width: 350px;
+  border: 1px solid #00ffe5;
+  transition: 0.3s ease;
+}
+
+.formContainer:hover {
+  box-shadow: 0 0 40px #00f7ff;
+}
+
+/* ✅ Inputs (including Username) with white background and black text */
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 2px solid #00ffe5;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: 0 0 10px #00ffe5;
+  background-color: #f3f3f3;
+}
+
+/* ✅ Dropdown options fix */
+select.input {
+  color: black;
+  background-color: white;
+}
+
+select.input option {
+  color: black;
+  background-color: #00ffe5;
+}
+
+/* ✅ Neon button */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: #00ffe5;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 10px #00ffe5;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px #00ffe5, 0 0 30px #00f7ff;
+  transform: scale(1.02);
+}

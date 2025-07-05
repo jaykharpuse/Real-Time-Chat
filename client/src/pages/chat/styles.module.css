@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* 🌈 Animated Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.chatContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Room and users component */
+.roomAndUsersColumn {
+  border-right: 1px solid #00ffe5;
+  padding-right: 20px;
+}
+.roomTitle {
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #00ffe5;
+  text-shadow: 0 0 10px #00ffe5;
+}
+.usersTitle {
+  font-size: 1.2rem;
+  color: #00ffe5;
+}
+.usersList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 60px;
+  color: #00ffe5;
+}
+.usersList li {
+  margin-bottom: 12px;
+  padding-left: 5px;
+  border-left: 2px solid #00ffe5;
+}
+
+/* Messages */
+.messagesColumn {
+  height: 85vh;
+  overflow: auto;
+  padding: 10px 10px 10px 40px;
+  scroll-behavior: smooth;
+}
+.message {
+  background: rgba(0, 24, 111, 0.8);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  max-width: 600px;
+  padding: 12px 16px;
+  box-shadow: 0 0 10px #00ffe5;
+  border: 1px solid #00ffe5;
+  backdrop-filter: blur(3px);
+}
+.msgMeta {
+  color: #00ffe5;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+.msgText {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Message input and button */
+.sendMessageContainer {
+  padding: 16px 20px 20px 16px;
+  display: flex;
+  align-items: center;
+}
+.messageInput {
+  padding: 14px;
+  margin-right: 16px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #00ffe5;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+.messageInput:focus {
+  box-shadow: 0 0 10px #00ffe5;
+}
+
+/* Neon send button */
+.sendBtn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #00ffe5;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe5;
+  transition: all 0.3s ease-in-out;
+}
+.sendBtn:hover {
+  box-shadow: 0 0 20px #00ffe5, 0 0 30px #00f7ff;
+  transform: scale(1.05);
+}

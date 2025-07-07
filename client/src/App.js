@@ -5,7 +5,11 @@ import Chat from './pages/chat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';
 
-const socket = io.connect(process.env.REACT_APP_SOCKET_SERVER_URL); 
+const socket = io.connect(process.env.REACT_APP_SOCKET_SERVER_URL, {
+  transports: ['websocket'],
+  withCredentials: true,
+});
+ 
 
 
 function App() {
